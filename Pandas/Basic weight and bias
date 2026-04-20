@@ -1,0 +1,11 @@
+def simple_model(x, w, b):
+    return w*x+b
+
+weight = 100
+bias = 8
+
+house_size = 2000
+
+predicted_price = simple_model(house_size, weight, bias)
+
+print(f'the model predicts a price of ${predicted_price} for {house_size} sqft')
