@@ -1,0 +1,12 @@
+import pandas as pd
+
+data = {'size_sqft': [100,200,300,500],
+       'city': ['nyc', 'mumbai','tokyo','london'],
+       'price_usd': [500000, 450000, 1200000, 230000]}
+
+df = pd.DataFrame(data)
+print('our dataset:', df)
+
+X = df[['size_sqft', 'city']]
+y = df['price_usd']
+print("target values to predict:", y.values)
