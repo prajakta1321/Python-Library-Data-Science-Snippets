@@ -1,0 +1,13 @@
+import numpy as np 
+
+true_price = np.array([300000, 450000, 220000])
+predicted_price = np.array([250000, 330000, 110000])
+
+errors = true_price - predicted_price
+
+squared_errors = errors ** 2
+
+# calculating the mean squared error
+mse = np.mean(squared_errors)
+
+print(f'mse is:',{mse})
