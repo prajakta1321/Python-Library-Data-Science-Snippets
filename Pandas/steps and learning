@@ -1,0 +1,8 @@
+weight = 11.0
+learning__rate = 0.1
+
+for step in range(5):
+    slope = 2*weight
+
+    weight = weight - (learning__rate * slope)
+    print(f'step{step+1}: new weight is {weight:.2f}')
