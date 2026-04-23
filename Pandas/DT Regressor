@@ -1,0 +1,12 @@
+from sklearn.tree import DecisionTreeRegressor
+import numpy as np
+
+X = np.array([[1], [2],[3],[4],[5]])
+y = np.array([10, 20, 30, 40, 70])
+
+model_good = DecisionTreeRegressor(max_depth = 2).fit(X,y)
+
+model_overfit = DecisionTreeRegressor(max_depth=None).fit(X,y)
+
+print('overfit prediction for exact training data:', model_overfit.predict([[3]]))
+print('overfit behaviour on new, unseen data point 3.1:', model_overfit.predict([[3.1]]))
